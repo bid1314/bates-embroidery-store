@@ -13,18 +13,21 @@ export async function generateMetadata({
 }: {
   params: { collection: string };
 }): Promise<Metadata> {
-  const collection = await getCategory(params.collection);
+  const { collection } = params;
+  const collectionData = await getCategory(collection);
 
-  if (!collection) return notFound();
+  if (!collectionData) return notFound();
 
   return {
-    title: collection.name,
+    title: collectionData.name,
     description:
-      collection.metaDescription || collection.description || `${collection.name} products`,
+      collectionData.metaDescription ||
+      collectionData.description ||
+      `${collectionData.name} products`,
     openGraph: {
       images: [
         {
-          url: `/api/og?title=${encodeURIComponent(collection.name)}`,
+          url: `/api/og?title=${encodeURIComponent(collectionData.name)}`,
           width: 1200,
           height: 630
         }
@@ -40,10 +43,11 @@ export default async function CategoryPage({
   params: { collection: string };
   searchParams?: { [key: string]: string | string[] | undefined };
 }) {
+  const { collection } = params;
   const { sort, q: searchValue } = searchParams as { [key: string]: string };
   const { sortKey, reverse } = sorting.find((item) => item.slug === sort) || defaultSort;
 
-  const products = await getProductsByCategory(params.collection, {
+  const products = await getProductsByCategory(collection, {
     query: searchValue,
     sort: `${sortKey} ${reverse ? 'desc' : 'asc'}`
   });

@@ -26,6 +26,9 @@
   "dependencies": {
     "@headlessui/react": "^2.2.4",
     "@heroicons/react": "^2.2.0",
+    "@supabase/supabase-js": "^2.39.2",
+    "@upstash/ratelimit": "^1.0.1",
+    "@upstash/redis": "^1.28.1",
     "clsx": "^2.1.1",
     "geist": "^1.4.2",
     "graphql": "^16.11.0",

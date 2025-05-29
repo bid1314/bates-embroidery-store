@@ -1,0 +1,14 @@
+{
+  "assetsPath": "",
+  "componentLibrary": "none",
+  "componentsPath": "components",
+  "defaultConfigPath": "/home/codespace/.anima",
+  "framework": "react",
+  "language": "typescript",
+  "nextRouterType": "app-router",
+  "projectRoot": "/workspaces/bates-embroidery-store",
+  "styleguidePath": "",
+  "styling": "tailwind",
+  "tailwindConfigPath": "tailwind.config.js",
+  "tailwindConfigReuseEnabled": false
+}

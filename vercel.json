@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/",
+      "continue": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/:tenant/(.*)",
+      "destination": "/:tenant/$1"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_SUPABASE_URL": "@supabase_url",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "@supabase_anon_key",
+    "SUPABASE_SERVICE_ROLE_KEY": "@supabase_service_role_key",
+    "UPSTASH_REDIS_REST_URL": "@upstash_redis_url",
+    "UPSTASH_REDIS_REST_TOKEN": "@upstash_redis_token"
+  },
+  "regions": ["iad1"],
+  "public": false,
+  "cleanUrls": true,
+  "trailingSlash": false
+}

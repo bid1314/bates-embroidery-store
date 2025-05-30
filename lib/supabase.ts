@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import { Page } from './types';
 
 // Create Supabase client for client-side usage
 export const supabase = createClient(
@@ -164,4 +165,21 @@ export async function getTenantProducts(
   }
   
   return data || [];
+}
+
+// Helper function to get page by slug for a tenant
+export async function getTenantPage(tenantId: string, slug: string): Promise<Page | null> {
+  const { data, error } = await supabase
+    .from('pages')
+    .select('*')
+    .eq('tenant_id', tenantId)
+    .eq('slug', slug)
+    .single();
+
+  if (error) {
+    console.error('Error fetching page:', error);
+    return null;
+  }
+
+  return data as unknown as Page;
 } 

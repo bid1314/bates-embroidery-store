@@ -26,6 +26,7 @@
   "dependencies": {
     "@headlessui/react": "^2.2.4",
     "@heroicons/react": "^2.2.0",
+    "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.39.2",
     "@upstash/ratelimit": "^1.0.1",
     "@upstash/redis": "^1.28.1",
@@ -64,5 +65,16 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.1.8",
     "typescript": "^5.8.3"
-  }
+  },
+  "name": "bates-embroidery-store-2",
+  "version": "1.0.0",
+  "description": "[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/swellstores/verswell-commerce&project-name=commerce&repo-name=commerce&demo-title=Next.js%20Swell%20Commerce&demo-url=https://verswell-commerce.vercel.app/&demo-image=https%3A%2F%2Fbigcommerce-demo-asset-ksvtgfvnd.vercel.app%2Fbigcommerce.png&env=SWELL_STORE_ID,SWELL_PUBLIC_KEY,SWELL_REVALIDATION_SECRET,SITE_NAME,TWITTER_CREATOR,TWITTER_SITE)",
+  "main": ".eslintrc.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

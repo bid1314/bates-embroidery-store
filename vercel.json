@@ -24,8 +24,12 @@
     "NEXT_PUBLIC_SUPABASE_ANON_KEY": "@supabase_anon_key",
     "SUPABASE_SERVICE_ROLE_KEY": "@supabase_service_role_key",
     "UPSTASH_REDIS_REST_URL": "@upstash_redis_url",
-    "UPSTASH_REDIS_REST_TOKEN": "@upstash_redis_token"
+    "UPSTASH_REDIS_REST_TOKEN": "@upstash_redis_token",
+    "NEXT_PUBLIC_SWELL_STORE_ID": "batesembroidery",
+    "NEXT_PUBLIC_SWELL_PUBLIC_KEY": "pk_m02CHphIFU5JyrtrXQQpRhEgM0HDGxpw",
+    "SWELL_SECRET_KEY": "sk_BITEs2fTITuzDmWX5lmU8z1I9qG7LZnq"
   },
+
   "regions": ["iad1"],
   "public": false,
   "cleanUrls": true,

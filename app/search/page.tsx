@@ -13,15 +13,23 @@ export const metadata = {
 export default async function SearchPage({
   searchParams
 }: {
-  searchParams?: { [key: string]: string | string[] | undefined };
+  searchParams: { [key: string]: string | string[] | undefined };
 }) {
-  const { sort, q: searchValue } = searchParams as { [key: string]: string };
+  const sort = typeof searchParams.sort === 'string' ? searchParams.sort : '';
+  const searchValue = typeof searchParams.q === 'string' ? searchParams.q : '';
+
   const { sortKey, reverse } = sorting.find((item) => item.slug === sort) || defaultSort;
 
-  const products = await getProducts({
-    query: searchValue,
-    sort: `${sortKey} ${reverse ? 'desc' : 'asc'}`
-  });
+  let products = [];
+  try {
+    products = await getProducts({
+      query: searchValue,
+      sort: `${sortKey} ${reverse ? 'desc' : 'asc'}`
+    });
+  } catch (error) {
+    console.error('Error fetching products:', error);
+  }
+
   const resultsText = products.length > 1 ? 'results' : 'result';
 
   return (
@@ -31,7 +39,7 @@ export default async function SearchPage({
           {products.length === 0
             ? 'There are no products that match '
             : `Showing ${products.length} ${resultsText} for `}
-          <span className="font-bold">&quot;{searchValue}&quot;</span>
+          <span className="font-bold">"{searchValue}"</span>
         </p>
       ) : null}
       {products.length > 0 ? (

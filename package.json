@@ -15,7 +15,7 @@
     "prettier:check": "prettier --check --ignore-unknown .",
     "test": "pnpm lint && pnpm prettier:check",
     "test:e2e": "playwright test",
-    "codegen": "graphql-codegen -r dotenv/config --config .graphqlrc.yml"
+    "codegen": "graphql-codegen -r dotenv/config --config .graphqlrc.js"
   },
   "git": {
     "pre-commit": "lint-staged"

@@ -76,7 +76,7 @@ export async function GET(request: NextRequest) {
       },
       {
         headers: {
-          'X-RateLimit-Limit': limit.toString(),
+          'X-RateLimit-Limit': rateLimitMax.toString(),
           'X-RateLimit-Remaining': remaining.toString(),
           'X-RateLimit-Reset': new Date(reset).toISOString(),
           'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300'

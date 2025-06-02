@@ -36,7 +36,7 @@
     "graphql-request": "^7.2.0",
     "graphql-tag": "^2.12.6",
     "isomorphic-dompurify": "^2.25.0",
-    "marked": "^11.0.1",
+    "marked": "^15.0.12",
     "next": "^15.3.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"

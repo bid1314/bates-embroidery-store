@@ -42,8 +42,8 @@ dependencies:
     specifier: ^2.25.0
     version: 2.25.0
   marked:
-    specifier: ^11.0.1
-    version: 11.2.0
+    specifier: ^15.0.12
+    version: 15.0.12
   next:
     specifier: ^15.3.2
     version: 15.3.2(@babel/core@7.27.3)(react-dom@19.1.0)(react@19.1.0)
@@ -5488,8 +5488,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /marked@11.2.0:
-    resolution: {integrity: sha512-HR0m3bvu0jAPYiIvLUUQtdg1g6D247//lvcekpHO1WMvbwDlwSkZAX9Lw4F4YHE1T0HaaNve0tuAWuV1UJ6vtw==}
+  /marked@15.0.12:
+    resolution: {integrity: sha512-8dD6FusOQSrpv9Z1rdNMdlSgQOIP880DHqnohobOmYLElGEqAL/JvxvuxZO16r4HtjTlfPRDC1hbvxC9dPN2nA==}
     engines: {node: '>= 18'}
     hasBin: true
     dev: false
